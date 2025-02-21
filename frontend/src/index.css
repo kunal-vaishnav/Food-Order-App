@@ -39,6 +39,19 @@ body {
 #main-header button {
   font-size: 1.5rem;
   font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  background-color: #ffc404;
+  border: 1px solid #ffc404;
+  color: #1f1a09;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+
+#main-header button:hover,
+#main-header button:active {
+  background-color: #ffab04;
+  border-color: #ffab04;
+  color: #1f1a09;
 }
 
 h1 {
@@ -50,7 +63,25 @@ h1 {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
+.button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #ffc404;
+  border: 1px solid #ffc404;
+  color: #1f1a09;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+.button:hover,
+.button:active {
+  background-color: #ffab04;
+  border-color: #ffab04;
+  transform: scale(1.05);
+}
 #meals {
   width: 90%;
   max-width: 70rem;
@@ -108,12 +139,6 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-.cart {
-  background-color: #312c1d;
-  padding: 1rem;
-  border-radius: 8px;
-}
-
 .cart h2 {
   margin: 1rem 0;
 }
@@ -125,7 +150,7 @@ h1 {
 }
 
 .modal {
-  background-color: #e4ddd4 !important;
+  background-color: #e4ddd4;
   border-radius: 6px;
   border: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
@@ -133,6 +158,10 @@ h1 {
   width: 80%;
   max-width: 40rem;
   animation: fade-slide-up 0.3s ease-out forwards;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
 }
 
 .modal-actions {
@@ -156,7 +185,7 @@ h1 {
   margin: 2rem 0;
   font-size: 1.15rem;
   font-weight: bold;
-  color: #d9e2f1;
+  color: #46443c;
 }
 
 .cart-item {
@@ -194,51 +223,6 @@ h1 {
 .cart-item-actions button:active {
   background-color: #1d1a16;
   color: #ffab04;
-}
-
-.control {
-  margin: 0.5rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Ensures label and input align properly */
-  text-align: left;
-}
-
-.control label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.control input {
-  width: 100%;
-  max-width: 20rem;
-  font: inherit;
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-.control-row {
-  display: flex;
-  justify-content: flex-start; /* Aligns elements to the left */
-  gap: 1rem;
-}
-
-.button {
-  font: inherit;
-  cursor: pointer;
-  background-color: #ffc404;
-  border: 1px solid #ffc404;
-  color: #1f1a09;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
-}
-
-.button:hover,
-.button:active {
-  background-color: #ffab04;
-  border-color: #ffab04;
-  color: #1f1a09;
 }
 
 .error {
