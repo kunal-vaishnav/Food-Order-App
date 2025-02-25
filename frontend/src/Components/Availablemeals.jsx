@@ -20,7 +20,7 @@ export default function Availablemeals() {
     data: meals,
     loading,
     error,
-  } = Usehttp("http://localhost:3000/meals", reqconfig, []);
+  } = Usehttp(endpoint+"meals", reqconfig, []);
   if (loading) {
     return <p className="center">Fetching meals</p>;
   }
