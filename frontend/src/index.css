@@ -233,7 +233,39 @@ h1 {
   display: inline-block;
   text-align: center;
 }
+.control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
 
+/* Style for labels inside each control */
+.control label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+/* Style for input elements */
+.control input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* For the row that holds Postal Code and City side by side */
+.control-row {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Ensure each control in the row takes equal width */
+.control-row .control {
+  flex: 1;
+}
 @keyframes fade-slide-up {
   from {
     opacity: 0;
