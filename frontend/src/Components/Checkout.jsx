@@ -8,6 +8,8 @@ import Button from "./Button.jsx";
 import Modal from "./Modal.jsx";
 import Usehttp from "./Usehttp.jsx";
 import Error from "./Error.jsx";
+import API_END_POINT from "../../constant.js";
+
 
 const config = {
   method: "POST",
@@ -31,7 +33,7 @@ export default function Checkout() {
     cleardata();
   }
   const { data, loading, error, Request, cleardata } = Usehttp(
-    "http://localhost:3000/orders",
+   API_END_POINT+"orders",
     config
   );
   // function handlesubmit(event) {
