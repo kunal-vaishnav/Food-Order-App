@@ -8,7 +8,8 @@ import Button from "./Button.jsx";
 import Modal from "./Modal.jsx";
 import Usehttp from "./Usehttp.jsx";
 import Error from "./Error.jsx";
-import API_END_POINT from "../../constant.js";
+import { API_END_POINT } from "../../constant.js";
+
 
 
 const config = {
