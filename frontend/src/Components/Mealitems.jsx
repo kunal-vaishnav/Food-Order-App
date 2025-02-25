@@ -2,6 +2,7 @@ import { Formatting } from "../Formatting.jsx";
 import Button from "./Button.jsx";
 import { useContext } from "react";
 import CartContext from "../store/CardContext.jsx";
+import { API_END_POINT } from "../../constant.js";
 
 export default function Mealitems({ foods }) {
   const cartctx = useContext(CartContext);
@@ -15,7 +16,7 @@ export default function Mealitems({ foods }) {
       {foods.map((food) => (
         <li className="meal-item" key={food.id}>
           <article>
-            <img src={`http://localhost:3000/${food.image}`} alt={food.name} />
+            <img src={API_END_POINT+`${food.image}`} alt={food.name} />
             <div>
               <h2>{food.name}</h2>
               <p className="meal-item-price">{Formatting.format(food.price)}</p>
