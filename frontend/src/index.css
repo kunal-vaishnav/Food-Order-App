@@ -63,6 +63,7 @@ h1 {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
+
 .button {
   font: inherit;
   cursor: pointer;
@@ -82,6 +83,7 @@ h1 {
   border-color: #ffab04;
   transform: scale(1.05);
 }
+
 #meals {
   width: 90%;
   max-width: 70rem;
@@ -233,6 +235,7 @@ h1 {
   display: inline-block;
   text-align: center;
 }
+
 .control {
   display: flex;
   flex-direction: column;
@@ -266,6 +269,7 @@ h1 {
 .control-row .control {
   flex: 1;
 }
+
 @keyframes fade-slide-up {
   from {
     opacity: 0;
@@ -274,5 +278,65 @@ h1 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablet breakpoint (768px and below) */
+@media (max-width: 768px) {
+  #main-header {
+    flex-direction: column;
+    padding: 2rem 5%;
+    gap: 1rem;
+  }
+
+  #main-header #title img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #main-header button {
+    margin-top: 1rem;
+  }
+
+  /* Meals grid becomes 1 column if width is below 20rem each */
+  #meals {
+    grid-template-columns: 1fr;
+  }
+
+  /* Adjust modal width */
+  .modal {
+    width: 90%;
+  }
+}
+
+/* Mobile breakpoint (480px and below) */
+@media (max-width: 480px) {
+  /* Decrease padding on main header */
+  #main-header {
+    padding: 1.5rem 5%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #main-header button {
+    font-size: 1.2rem;
+  }
+
+  /* Further reduce meal card size */
+  #meals {
+    gap: 0.5rem;
+  }
+
+  .meal-item img {
+    height: 15rem;
+  }
+
+  /* Controls in checkout form stack fully */
+  .control-row {
+    flex-direction: column;
   }
 }
