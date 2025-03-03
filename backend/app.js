@@ -64,7 +64,8 @@ app.post("/orders", async (req, res) => {
     };
 
     // Read existing orders
-    const ordersPath = path.join(DATA_PATH, "orders.json");
+    //const ordersPath = path.join(DATA_PATH, "orders.json");
+    const ordersPath = '/tmp/orders.json'; // for vercel deployments
     let allOrders = [];
 
     try {
